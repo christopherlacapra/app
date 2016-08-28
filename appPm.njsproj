@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{e424551e-1ec5-4fe5-bb86-2da9b8fd9006}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <StartupFile>server.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -20,6 +20,9 @@
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\models\" />
+    <Folder Include="config\" />
+    <Folder Include="app\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\bcryptjs\" />
@@ -45,6 +48,9 @@
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\models\user.js" />
+    <Compile Include="config\database.js" />
+    <Compile Include="config\passport.js" />
     <Compile Include="server.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
