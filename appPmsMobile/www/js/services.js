@@ -49,6 +49,7 @@ angular.module('starter')
                 $http.post(API_ENDPOINT.url + '/authenticate', user).then(function (result) {
                     if (result.data.success) {
                         storeUserCredentials(result.data.token);
+                        console.log("success");
                         resolve(result.data.msg);
                     } else {
                         reject(result.data.msg);
